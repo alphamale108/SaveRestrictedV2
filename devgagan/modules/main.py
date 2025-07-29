@@ -231,7 +231,7 @@ async def batch_link(_, message):
     keyboard = InlineKeyboardMarkup([[join_button]])
     pin_msg = await app.send_message(
         user_id,
-        f"Batch process started ⚡\nProcessing: 0/{cl}\n\n**Powered by Secret Team**",
+        f"Batch process started ⚡\nProcessing: 0/{cl}\n\n**Powered by Team Secret**",
         reply_markup=keyboard
     )
     await pin_msg.pin(both_sides=True)
@@ -257,7 +257,7 @@ async def batch_link(_, message):
         if normal_links_handled:
             await set_interval(user_id, interval_minutes=300)
             await pin_msg.edit_text(
-                f"Batch completed successfully for {cl} messages 🎉\n\n**__Powered by Screat Team__**",
+                f"Batch completed successfully for {cl} messages 🎉\n\n**__Powered by Team Secret__**",
                 reply_markup=keyboard
             )
             await app.send_message(message.chat.id, "Batch completed successfully! 🎉")
